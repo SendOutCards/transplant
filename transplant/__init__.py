@@ -42,8 +42,11 @@ SQLSelectHandler = Callable[[Context, Table], SQL]
 SQLInsertHandler = Callable[[Context, Table, Columns, Rows], Tuple[Columns, Rows]]
 
 
-class TableSpec(TypedDict, total=False):
+class _TableSpec(TypedDict):
     table: Table
+
+
+class TableSpec(_TableSpec, total=False):
     select_handler: Union[str, SQLSelectHandler]
     pre_insert_handler: SQLInsertHandler
 

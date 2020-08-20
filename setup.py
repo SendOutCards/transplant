@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='soc-transplant',
-    version='0.1.0',
+    version='0.2.0',
     description='Framework for seeding databases from another',
     author='Tyler Lovely',
     author_email='tyler.n.lovely@gmail.com',
